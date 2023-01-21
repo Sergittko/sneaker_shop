@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap");
+
+.headerContainer {
+  position: fixed;
+  top: 0;
+  z-index: 99999999999999999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 70px;
+  padding: 0 24px;
+  user-select: none;
+  background-color: #fff;
+  .headerLogo {
+    display: flex;
+    cursor: default;
+    img {
+      width: 50px;
+      height: 50px;
+      margin: auto;
+      object-fit: contain;
+      // transform: rotateY(180deg);
+    }
+    h2 {
+      font-size: 16px;
+      width: min-content;
+      margin: auto 0 auto 5px;
+      text-align: left;
+      line-height: 0.9;
+      font-family: "Audiowide", cursive;
+      font-family: "Fugaz One", cursive;
+      font-family: "Sedgwick Ave Display", cursive;
+    }
+  }
+  .headerNavigation {
+    ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        padding: 26px 12px;
+        transition: 0.2s;
+        cursor: pointer;
+        &:hover {
+          background-color: #f3f3f3;
+          color: #414141;
+        }
+        &:active {
+          background-color: #dfdfdf;
+        }
+      }
+    }
+  }
+  .headerSwithers {
+    margin: 0 10px 0 0;
+    width: min-content;
+    display: flex;
+    text-align: center;
+    button {
+      display: block;
+      margin: 0 0 0 auto;
+    }
+  }
+}

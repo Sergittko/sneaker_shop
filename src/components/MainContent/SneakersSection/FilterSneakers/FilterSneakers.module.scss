@@ -1,0 +1,23 @@
+.filterContainer {
+  margin: 0 20px 0 0;
+  div {
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    cursor: pointer;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 0 0 10px 0;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(231, 231, 231);
+    box-sizing: border-box;
+    &::after {
+      content: url(../../../../img/icons/arrow.svg);
+      display: block;
+      height: 15px;
+    }
+  }
+}

@@ -1,15 +1,18 @@
-import { useState } from "react";
+import style from "./App.module.scss";
+import Header from "./components/Header/Header";
+import Sneakers from "./components/MainContent/SneakersSection/Sneakers";
+import Footer from "./components/Footer/Footer";
 
-function App() {
-   let [count, change] = useState(0);
-   return (
-      <div className="App">
-         <p>{count}</p>
-         <button onClick={change(change => ++change)}>
-            Add count
-         </button>
-      </div>
-   );
-}
+let App = () => {
+  return (
+    <div>
+      <Header />
+      <main className={style.mainContent}>
+        <Sneakers />
+      </main>
+      <Footer />
+    </div>
+  );
+};
 
 export default App;

@@ -1,11 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import React, { Suspense } from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import "./assets/i18n/i18n";
+import Preloader from "./components/common/preloader/Preloader";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <Suspense fallback={<Preloader />}>
+      <App />
+    </Suspense>
   </React.StrictMode>
 );

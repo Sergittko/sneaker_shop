@@ -1,0 +1,21 @@
+{
+  "menu": {
+    "main": "Main",
+    "sneakers": "Sneakers",
+    "cart": "Cart"
+  },
+
+  "sneakersSection": {
+    "headerTitle": "SHOP ALL SNEAKERS",
+    "headerSubTitle": "Shop for new releases from must-have names like Air Jordan, Nike, New Balance and Yeezy, along with the latest collaborations from brands like Vans, Reebok, Converse, ASICS, and more.",
+    "filterSneakers": {
+      "model": "Model",
+      "brand": "Brand",
+      "men": "Men's sizes",
+      "women": "Women's sizes",
+      "price": "Price",
+      "color": "Color",
+      "year": "Year"
+    }
+  }
+}
