@@ -12,19 +12,31 @@ let SneakersResult = () => {
   return (
     <div className={style.allSneakers}>
       <div className={style.sneakersSettings}>
-        <h3>Results</h3>
+        <h3>{t("sneakersSection.sneakersResult.resultsTitle")}</h3>
         <div className={style.select}>
-          <label forhtml="sneakersOption">Sort By:</label>
+          <label forhtml="sneakersOption">
+            {t("sneakersSection.sneakersResult.sort.sotrBy")}
+          </label>
           <select
             name="sneakersOption"
             value={option}
             onChange={(e) => handleChange(e)}
           >
-            <option value="Relevance">Relevance</option>
-            <option value="Low">Price Low</option>
-            <option value="High">Price High</option>
-            <option value="Newest">Newest</option>
-            <option value="Trending">Trending</option>
+            <option value="Relevance">
+              {t("sneakersSection.sneakersResult.sort.relevance")}
+            </option>
+            <option value="Low">
+              {t("sneakersSection.sneakersResult.sort.low")}
+            </option>
+            <option value="High">
+              {t("sneakersSection.sneakersResult.sort.high")}
+            </option>
+            <option value="Newest">
+              {t("sneakersSection.sneakersResult.sort.newest")}
+            </option>
+            <option value="Trending">
+              {t("sneakersSection.sneakersResult.sort.trending")}
+            </option>
           </select>
         </div>
       </div>

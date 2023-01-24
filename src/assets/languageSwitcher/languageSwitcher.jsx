@@ -1,7 +1,7 @@
 import style from "./languageSwitcher.module.scss";
 import { useState } from "react";
-import uaIcon from "../../img/icons/uaIcon.png";
-import engIcon from "../../img/icons/engIcon.png";
+import uaIcon from "../../img/icons/ua_flag.svg";
+import engIcon from "../../img/icons/uk_flag.svg";
 
 let LanguageSwitcher = ({ changeLanguage }) => {
   let languages = ["ENG", "UA"];

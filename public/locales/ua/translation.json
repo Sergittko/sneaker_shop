@@ -9,6 +9,7 @@
     "headerTitle": "ВСІ КРОСІВКИ",
     "headerSubTitle": "Купуйте новинки таких відомих імен, як Air Jordan, Nike, New Balance і Yeezy, а також найновіші колаборації таких брендів, як Vans, Reebok, Converse, ASICS тощо.",
     "filterSneakers": {
+      "filterTitle": "Фільтр",
       "model": "Модель",
       "brand": "Бренд",
       "men": "Чоловічі розміри",
@@ -16,6 +17,17 @@
       "price": "Ціна",
       "color": "Забарвлення",
       "year": "Рік"
+    },
+    "sneakersResult": {
+      "resultsTitle": "Результати",
+      "sort": {
+        "sotrBy": "Сортувати:",
+        "relevance": "Актуальність",
+        "low": "Дешеві",
+        "high": "Дорогі",
+        "newest": "Новинки",
+        "trending": "Популярність"
+      }
     }
   }
 }

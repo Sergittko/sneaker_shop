@@ -4,7 +4,7 @@ let FilterSneakers = () => {
   const { t } = useTranslation();
   return (
     <aside className={style.filterContainer}>
-      <h3>Filter</h3>
+      <h3>{t("sneakersSection.filterSneakers.filterTitle")}</h3>
       <div>{t("sneakersSection.filterSneakers.model")}</div>
       <div>{t("sneakersSection.filterSneakers.brand")}</div>
       <div>{t("sneakersSection.filterSneakers.men")}</div>
