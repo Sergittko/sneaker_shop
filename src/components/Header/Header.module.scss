@@ -44,9 +44,14 @@
       margin: 0;
       padding: 0;
       li {
-        padding: 26px 12px;
+        padding: 26px 0;
         transition: 0.2s;
-        cursor: pointer;
+        a {
+          color: inherit;
+          text-decoration: none;
+          padding: 26px 12px;
+          cursor: pointer;
+        }
         &:hover {
           background-color: #f3f3f3;
           color: #414141;

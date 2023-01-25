@@ -3,6 +3,8 @@ import style from "./Header.module.scss";
 import ThemeSwitcher from "../../assets/themeSwitcher/themeSwitcher";
 import LanguageSwitcher from "../../assets/languageSwitcher/languageSwitcher";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+
 let Header = () => {
   const { t, i18n } = useTranslation();
   const changeLanguage = (language) => {
@@ -17,9 +19,15 @@ let Header = () => {
       </div>
       <nav className={style.headerNavigation}>
         <ul>
-          <li>{t("menu.main")}</li>
-          <li>{t("menu.sneakers")}</li>
-          <li>{t("menu.cart")}</li>
+          <li>
+            <Link to="/">{t("menu.main")}</Link>
+          </li>
+          <li>
+            <Link to="/sneakers">{t("menu.sneakers")}</Link>
+          </li>
+          <li>
+            <Link to="/cart">{t("menu.cart")}</Link>
+          </li>
         </ul>
       </nav>
       <div className={style.headerSwithers}>

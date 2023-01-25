@@ -1,8 +1,17 @@
 import style from "./SneakerCard.module.scss";
+import plus from "../../../../../img/icons/plus.svg";
+import check from "../../../../../img/icons/check.svg";
+import { useState } from "react";
 
 let SneakerCard = () => {
+  let [addMode, changeMode] = useState(false);
+  let [isItemAdded, toggleAdding] = useState(false);
   return (
-    <div className={style.cardContainer}>
+    <div
+      className={style.cardContainer}
+      onMouseOver={() => changeMode(true)}
+      onMouseOut={() => changeMode(false)}
+    >
       <div className={style.imageContainer}>
         <img
           alt="Air Jordan 11 Retro 'Cherry'"
@@ -13,6 +22,13 @@ let SneakerCard = () => {
       <span className={style.brand}>Air Jordan</span>
       <h4 className={style.name}>Air Jordan 11 Retro 'Cherry'</h4>
       <span className={style.price}>$210+</span>
+      <div className={style.addToCart}>
+        {addMode ? (
+          <button onClick={() => toggleAdding(!isItemAdded)}>
+            <img src={isItemAdded ? check : plus} alt="" />
+          </button>
+        ) : null}
+      </div>
     </div>
   );
 };

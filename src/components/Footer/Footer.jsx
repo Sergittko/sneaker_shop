@@ -1,10 +1,8 @@
 import logo from "../../img/logo/logo2.png";
 import style from "./Footer.module.scss";
 import FooterContacts from "./FooterContacts/FooterContacts";
-import { useTranslation } from "react-i18next";
-let Footer = () => {
-  const { t } = useTranslation();
 
+let Footer = () => {
   return (
     <footer className={style.footerContainer}>
       <div className={style.footerContent}>
