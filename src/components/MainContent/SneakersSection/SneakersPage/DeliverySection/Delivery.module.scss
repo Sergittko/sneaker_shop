@@ -1,0 +1,56 @@
+.delivery {
+  margin: 30px 0 60px;
+  border-bottom: 1px solid rgb(231, 231, 231);
+  border-top: 1px solid rgb(231, 231, 231);
+  .deliveryTitle {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 15px;
+    cursor: pointer;
+    &::after {
+      content: url("../../../../../img/icons/arrow.svg");
+      display: block;
+      height: 15px;
+    }
+  }
+  .deliveryInfo {
+    display: none;
+    padding: 0 15px;
+    z-index: -1;
+    h5,
+    p {
+      font-weight: 500;
+      font-size: 12px;
+      color: rgb(0, 0, 0);
+      color: var(#{--body-text-color-default});
+    }
+    h5 {
+      margin: 0;
+      padding: 10px 0 0 0;
+      color: var(#{--body-text-color-default});
+    }
+    p {
+      margin: 12px 0;
+      color: var(#{--body-text-color-default});
+    }
+  }
+}
+.showDeliveryInfo {
+  display: block !important;
+  animation: show 0.3s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

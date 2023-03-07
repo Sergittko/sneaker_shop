@@ -2,28 +2,39 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  background-color: #fff;
+  background-color: var(#{--components-background-default});
   padding: 20px 20px 35px;
   max-width: 190px;
   border-radius: 5px;
   transition: 0.2s;
   border: 1px solid rgba(203, 203, 203, 0);
   &:hover {
-    border: 1px solid #e3e3e3;
-    filter: drop-shadow(0px 0px 8px #e1e1e1);
+    border: 1px solid var(#{--border-items-default});
+    filter: drop-shadow(0px 0px 8px var(#{--border-items-default}));
   }
   &:active {
-    border: 1px solid #e3e3e3;
-    filter: drop-shadow(0px 0px 1px #e1e1e1);
+    border: 1px solid var(#{--border-items-default});
+    filter: drop-shadow(0px 0px 1px var(#{--border-items-default}));
   }
 
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
   .imageContainer {
     max-height: 150px;
     margin: 0px 0px 30px;
+    width: 100%;
+    height: 100%;
+    // background: #f6f6f6;
+    border-radius: 5px;
+
     img {
       width: 100%;
       height: 100%;
       cursor: pointer;
+      border-radius: 5px;
+      object-fit: contain;
     }
   }
   .brand {
@@ -40,8 +51,14 @@
     hyphens: auto;
     line-height: 18px;
     margin: 0px;
-    overflow: hidden;
     overflow-wrap: break-word;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    // Addition lines for 2 line or multiline ellipsis
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    white-space: normal;
     cursor: pointer;
   }
   .price {
@@ -54,9 +71,9 @@
 
   .addToCart {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    // bottom: 35px;
+    top: 27px;
+    right: 28px;
+    // bottom: 31px;
     button {
       border: 2px solid #000;
       width: 25px;
@@ -72,6 +89,27 @@
         height: 100%;
         object-fit: cover;
       }
+      .check {
+        animation: upDown 0.4s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+      }
     }
+  }
+}
+
+@keyframes upDown {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+
+  20% {
+    transform: translateY(-2px);
+  }
+
+  80% {
+    transform: translateY(2px);
+  }
+
+  100% {
+    transform: translateY(0px) scale(1.15);
   }
 }

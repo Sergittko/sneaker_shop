@@ -1,8 +1,44 @@
 import style from "./themeSwitcher.module.scss";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 let ThemeSwitcher = () => {
-  const [checked, setChecked] = useState(true);
+  let themeLocal = localStorage.getItem("theme");
+  let currentTheme =
+    themeLocal === "light" || themeLocal === null ? true : false;
+  const [checked, setChecked] = useState(currentTheme);
+
+  useEffect(() => {
+    let theme = checked ? "light" : "dark";
+    localStorage.setItem("theme", theme);
+    let root = document.querySelector(":root");
+    let components = [
+      "body-background",
+      "body-text-color",
+      "components-background",
+      "components-hover",
+      "black-white",
+      "border-items",
+      "button-background",
+      "sizePicker-disable-background",
+      "sizePicker-disable-text",
+      "sizePicker-border-hover",
+      "sizePicker-checked",
+      "heart-background",
+      "heart-fill",
+      "filter-button",
+      "invert",
+    ];
+    components.forEach(
+      (component) => {
+        root &&
+          root.style.setProperty(
+            `--${component}-default`,
+            `var(--${component}-${theme})`
+          );
+      },
+      [checked]
+    );
+  });
 
   return (
     <div className={style.cardToggle}>
@@ -18,90 +54,3 @@ let ThemeSwitcher = () => {
 };
 
 export default ThemeSwitcher;
-
-// const isDarkMode = window.matchMedia(`(prefers-color-scheme: dark)`).matches;
-// const isLightMode = window.matchMedia(`(prefers-color-scheme: light)`).matches;
-// const isNotSpecified = window.matchMedia(
-//   `(prefers-color-scheme: no-preference)`
-// ).matches;
-// const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified;
-
-// // $(document).ready(function () {
-// // detect current theme
-// let currentTheme = getUserThemePreference();
-
-// // change theme if current theme exists
-// setTheme(currentTheme);
-
-// // detect toggle interaction
-// // $("#themeSwitcher").on("change", toggleTheme);
-
-// //   detect any changes in system preferences
-// window
-//   .matchMedia("(prefers-color-scheme: dark)")
-//   .addListener((e) => e.matches && setTheme("dark"));
-// window
-//   .matchMedia("(prefers-color-scheme: light)")
-//   .addListener((e) => e.matches && setTheme("light"));
-// // });
-
-// // get user's theme preference
-// function getUserThemePreference() {
-//   let preference = undefined;
-
-//   // detect if there is an existing theme selection
-//   const localStorageTheme = localStorage.getItem("currentTheme");
-//   if (localStorageTheme) {
-//     preference = localStorageTheme;
-//   }
-
-//   // detect system theme preference
-//   if (isDarkMode) {
-//     // prefers dark mode if no locally stored preference
-//     preference = localStorageTheme ? localStorageTheme : "dark";
-//   } else if (isLightMode) {
-//     // prefers light mode if no locally stored preference
-//     preference = localStorageTheme ? localStorageTheme : "light";
-//   } else if (isNotSpecified || hasNoSupport) {
-//     // default to light mode if no locally stored preference
-//     preference = localStorageTheme ? localStorageTheme : "light";
-//   }
-
-//   return preference;
-// }
-
-// // Toggle theme switcher
-// function toggleTheme() {
-//   if (currentTheme === "light") {
-//     setTheme("dark");
-//   } else {
-//     setTheme("light");
-//   }
-// }
-
-// // switch Theme
-// function setTheme(theme) {
-//   let oldTheme, togglePosition;
-
-//   if (theme === "light") {
-//     oldTheme = "dark";
-//     togglePosition = true;
-//   } else {
-//     oldTheme = "light";
-//     togglePosition = false;
-//   }
-//   // change color variables
-//   //   $("html").addClass(theme);
-//   //   $("html").removeClass(oldTheme);
-
-//   //   // switch toggle accordingly
-//   //   $("#themeSwitcher").attr("checked", togglePosition);
-
-//   // save preference
-//   saveCurrentTheme(theme);
-// }
-
-// function saveCurrentTheme(theme) {
-//   currentTheme = theme;
-//   localStorage.setItem("currentTheme", theme);
-// }

@@ -1,0 +1,27 @@
+.buttonContainer {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  button {
+    padding: 16px;
+    transition: 0.2s;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 16px;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    border: none;
+    cursor: pointer;
+    background-color: var(#{--button-background-default});
+    color: #fff;
+
+    &:hover {
+      filter: contrast(0.7);
+      transform: scale(0.985);
+    }
+    &:active {
+      filter: contrast(0.5);
+      transform: scale(0.95);
+    }
+  }
+}

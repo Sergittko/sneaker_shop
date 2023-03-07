@@ -2,8 +2,9 @@ import logo from "../../img/logo/logo2.png";
 import style from "./Header.module.scss";
 import ThemeSwitcher from "../../assets/themeSwitcher/themeSwitcher";
 import LanguageSwitcher from "../../assets/languageSwitcher/languageSwitcher";
+import FavoriteItems from "../../assets/favoriteItems/FavoriteItems";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 let Header = () => {
   const { t, i18n } = useTranslation();
@@ -20,17 +21,39 @@ let Header = () => {
       <nav className={style.headerNavigation}>
         <ul>
           <li>
-            <Link to="/">{t("menu.main")}</Link>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? style.active : undefined
+              }
+              to="/"
+            >
+              {t("menu.main")}
+            </NavLink>
           </li>
           <li>
-            <Link to="/sneakers">{t("menu.sneakers")}</Link>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? style.active : undefined
+              }
+              to="/sneakers"
+            >
+              {t("menu.sneakers")}
+            </NavLink>
           </li>
           <li>
-            <Link to="/cart">{t("menu.cart")}</Link>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? style.active : undefined
+              }
+              to="/cart"
+            >
+              {t("menu.cart")}
+            </NavLink>
           </li>
         </ul>
       </nav>
       <div className={style.headerSwithers}>
+        <FavoriteItems />
         <ThemeSwitcher />
         <LanguageSwitcher changeLanguage={changeLanguage} />
       </div>

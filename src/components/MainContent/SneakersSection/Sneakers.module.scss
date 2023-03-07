@@ -3,7 +3,7 @@
   .sneakersHeader {
     text-align: center;
     margin: 0 0 40px 0;
-    background-color: #fff;
+    background-color: var(#{--components-background-default});
     padding: 80px 24px;
     h1 {
       font-size: 24px;

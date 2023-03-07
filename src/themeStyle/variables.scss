@@ -1,0 +1,121 @@
+$body-background-dark: #0d0d0d;
+$body-background-light: #f2f2f2;
+
+$body-text-color-dark: #ccc;
+$body-text-color-light: #333333;
+
+$components-background-dark: #222;
+$components-background-light: #fff;
+
+$components-hover-dark: #4d4d4d;
+$components-hover-light: #dfdfdf;
+
+$black-white-dark: #000;
+$black-white-light: #fff;
+
+$border-items-dark: #1d1d1d;
+$border-items-light: #e3e3e3;
+
+$button-background-dark: #222;
+$button-background-light: #000;
+
+$invert-dark: invert(0.8);
+$invert-light: invert(0);
+
+$sizePicker-disable-background-dark: #565656;
+$sizePicker-disable-background-light: #c4c4c4;
+
+$sizePicker-disable-text-dark: #878787;
+$sizePicker-disable-text-light: #949494;
+
+$sizePicker-border-hover-dark: #383838;
+$sizePicker-border-hover-light: #aaa3a3;
+
+$sizePicker-checked-dark: #0c0c0c;
+$sizePicker-checked-light: #272727;
+
+$heart-background-dark: #383838;
+$heart-background-light: #f2f2f2;
+
+$heart-fill-dark: #eee;
+$heart-fill-light: #333;
+
+$filter-button-dark: #4d4d4d;
+$filter-button-light: #fff;
+
+:root {
+  // body background
+  --body-background-dark: #{$body-background-dark};
+  --body-background-light: #{$body-background-light};
+  --body-background-default: var(#{--body-background-light});
+
+  // body text color
+  --body-text-color-dark: #{$body-text-color-dark};
+  --body-text-color-light: #{$body-text-color-light};
+  --body-text-color-default: var(#{--body-text-color-light});
+
+  // components background
+  --components-background-dark: #{$components-background-dark};
+  --components-background-light: #{$components-background-light};
+  --components-background-default: var(#{--components-background-light});
+
+  // components hover
+  --components-hover-dark: #{$components-hover-dark};
+  --components-hover-light: #{$components-hover-light};
+  --components-hover-default: var(#{--components-hover-light});
+
+  // black-white
+  --black-white-dark: #{$black-white-dark};
+  --black-white-light: #{$black-white-light};
+  --black-white-default: var(#{--black-white-light});
+
+  // border-items
+  --border-items-dark: #{$border-items-dark};
+  --border-items-light: #{$border-items-light};
+  --border-items-default: var(#{--border-items-light});
+
+  // button-background
+  --button-background-dark: #{$button-background-dark};
+  --button-background-light: #{$button-background-light};
+  --button-background-default: var(#{--button-background-light});
+
+  // invert
+  --invert-dark: #{$invert-dark};
+  --invert-light: #{$invert-light};
+  --invert-default: var(#{--invert-light});
+
+  // sizePicker-disable-background
+  --sizePicker-disable-background-dark: #{$sizePicker-disable-background-dark};
+  --sizePicker-disable-background-light: #{$sizePicker-disable-background-light};
+  --sizePicker-disable-background-default: var(#{--sizePicker-disable-background-light});
+
+  // sizePicker-disable-text
+  --sizePicker-disable-text-dark: #{$sizePicker-disable-text-dark};
+  --sizePicker-disable-text-light: #{$sizePicker-disable-text-light};
+  --sizePicker-disable-text-default: var(#{--sizePicker-disable-text-light});
+
+  // sizePicker-border-hover
+  --sizePicker-border-hover-dark: #{$sizePicker-border-hover-dark};
+  --sizePicker-border-hover-light: #{$sizePicker-border-hover-light};
+  --sizePicker-border-hover-default: var(#{--sizePicker-border-hover-light});
+
+  // sizePicker-checked
+  --sizePicker-checked-dark: #{$sizePicker-checked-dark};
+  --sizePicker-checked-light: #{$sizePicker-checked-light};
+  --sizePicker-checked-default: var(#{--sizePicker-checked-light});
+
+  // heart-background
+  --heart-background-dark: #{$heart-background-dark};
+  --heart-background-light: #{$heart-background-light};
+  --heart-background-default: var(#{--heart-background-light});
+
+  // heart-fill
+  --heart-fill-dark: #{$heart-fill-dark};
+  --heart-fill-light: #{$heart-fill-light};
+  --heart-fill-default: var(#{--heart-fill-light});
+
+  // filter-button
+  --filter-button-dark: #{$filter-button-dark};
+  --filter-button-light: #{$filter-button-light};
+  --filter-button-default: var(#{--filter-button-light});
+}

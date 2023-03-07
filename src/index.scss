@@ -1,0 +1,44 @@
+@import "./themeStyle/variables.scss";
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: var(#{--body-text-color-default});
+  // color: #333333;
+  /* color: rgb(0, 0, 0); */
+  background-color: var(#{--body-background-default});
+  // background-color: #f2f2f2;
+  /* background-color: #b4b4b4; */
+}
+
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
+
+html::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: var(#{--components-background-default});
+  // background-color: #f2f2f2;
+}
+
+html::-webkit-scrollbar {
+  width: 10px;
+  background-color: var(#{--components-background-default});
+}
+
+html::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #595959;
+  border: var(#{--components-background-default}) 3px solid;
+}

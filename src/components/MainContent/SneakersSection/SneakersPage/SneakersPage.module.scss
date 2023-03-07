@@ -1,0 +1,204 @@
+.pageContainer {
+  background-color: var(#{--components-background-default});
+  .sneakerContainer {
+    max-width: 1200px;
+    display: flex;
+    padding: 0 24px;
+    margin: 0 auto;
+    .sneakerImage {
+      width: 55%;
+      height: 100%;
+      position: sticky;
+      top: 110px;
+      margin: 0 0 55px 0;
+      padding: 0 24px 0 0;
+      img {
+        width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        margin: 0 auto auto 0;
+        border-radius: 10px;
+      }
+    }
+    .sneakerInfo {
+      width: 45%;
+      h2 {
+        font-weight: 500;
+        font-size: 12px;
+        color: rgb(129, 129, 129);
+        margin: 4px 0px 20px;
+      }
+      h1 {
+        margin: 0px;
+        font-size: 24px;
+        line-height: 26px;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 0 0 10px 0;
+        color: var(#{--body-text-color-default});
+      }
+      .price {
+        padding: 0 0 40px 0;
+        font-size: 20px;
+        color: var(#{--body-text-color-default});
+      }
+      .size {
+        display: block;
+        font-weight: 500;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: var(#{--body-text-color-default});
+        margin: 0 0 15px 0;
+        // text-align: center;
+      }
+      .sizePicker {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
+        label {
+          position: relative;
+          width: 100%;
+          height: 50px;
+          border: 1.5px solid rgb(231, 231, 231);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          user-select: none;
+          transition: 0.15s;
+          box-sizing: border-box;
+          cursor: pointer;
+          &:hover {
+            border-color: var(#{--sizePicker-border-hover-default});
+            box-shadow: inset 0px 0px 1px 0px rgba(170, 163, 163, 0.62);
+          }
+          input {
+            opacity: 0;
+            position: absolute;
+          }
+        }
+        .disabled {
+          color: var(#{--sizePicker-disable-text-default}) !important;
+          background-color: var(#{--sizePicker-disable-background-default}) !important;
+        }
+        .checked {
+          background-color: var(#{--sizePicker-checked-default});
+          color: #ffffff;
+        }
+      }
+      .buttonContainer {
+        .buyButton {
+          margin: 30px 0 0 0;
+          font-size: 14px;
+          font-weight: bold;
+          height: 50px;
+          line-height: 45px;
+          text-align: center;
+          text-decoration: none;
+          text-transform: uppercase;
+          width: 100%;
+          box-sizing: border-box;
+          background-color: rgb(233, 28, 35);
+          border: 1px solid rgb(233, 28, 35);
+          color: rgb(255, 255, 255);
+          transition: 0.2s;
+          cursor: pointer;
+          z-index: 2;
+          // border: none;
+          &:hover {
+            background-color: rgb(217, 26, 33);
+          }
+          &:active {
+            background-color: rgb(189, 23, 28);
+            transform: scale(0.99);
+          }
+        }
+        a {
+          color: inherit;
+          text-decoration: none;
+          outline: none;
+          .goToCartButton {
+            position: relative;
+            display: block;
+            margin: 30px 0 0 0;
+            width: 100%;
+            height: 50px;
+            line-height: 45px;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            box-sizing: border-box;
+            background-color: rgb(200, 24, 29);
+            border: 1px solid rgb(194, 27, 33);
+            color: rgb(255, 255, 255);
+            transition: 0.2s;
+            cursor: pointer;
+            z-index: 99;
+            animation: changeBackgroundColor 0.3s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+            // border: none;
+            &:hover {
+              background-color: rgb(217, 26, 33);
+            }
+            &:active {
+              background-color: rgb(189, 23, 28);
+              transform: scale(0.99);
+            }
+          }
+        }
+        .addedToCartSpan {
+          position: relative;
+          padding: 3px 0;
+          text-align: center;
+          width: 100%;
+          display: block;
+          background: #dfdfdf;
+          color: #333;
+          border-radius: 0 0 3px 3px;
+          font-size: 12px;
+          font-weight: 700;
+          text-transform: uppercase;
+          cursor: pointer;
+          z-index: 1;
+          animation: spanSliding 0.3s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+        }
+      }
+    }
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes spanSliding {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes changeBackgroundColor {
+  0% {
+    background: rgb(200, 24, 29);
+    border-color: rgb(194, 27, 33);
+  }
+
+  100% {
+    background: #019e4d;
+    border-color: #3b835f;
+  }
+}

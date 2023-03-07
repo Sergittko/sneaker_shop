@@ -1,0 +1,196 @@
+.orderContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(#{--components-background-default});
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 10px 0;
+  box-sizing: content-box;
+
+  .information {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    img {
+      width: 100%;
+      max-width: 77px;
+      height: 77px;
+      border-radius: 5px;
+      object-fit: contain;
+    }
+    .text {
+      margin: 0 0 0 10px;
+      h2 {
+        max-width: 420px;
+        margin: 10px 0px;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+      p {
+        margin: 10px 0px;
+        font-weight: 500;
+        font-size: 12px;
+        color: rgb(129, 129, 129);
+      }
+    }
+  }
+  .techInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+    .price {
+      font-weight: 500;
+      font-size: 14px;
+    }
+    .quantity {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 10px;
+      position: relative;
+      overflow: hidden;
+      input {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 15px;
+        color: rgb(0, 0, 0);
+        width: 10px;
+        height: 10px;
+        display: block;
+        border: none;
+        outline: none;
+        background-color: #e5e5e5;
+        padding: 10px;
+        border-radius: 50%;
+        caret-color: transparent;
+      }
+      .quantityArrow {
+        width: 20px;
+        height: 20px;
+        filter: contrast(0.3);
+        cursor: pointer;
+        transition: 0.2s;
+        z-index: 5;
+
+        &:hover {
+          filter: contrast(0.9);
+        }
+        &:active {
+          filter: contrast(0.5);
+        }
+      }
+      .quantityLoader {
+        position: absolute;
+        width: 150px;
+        background-color: var(#{--components-background-default});
+        z-index: 0;
+        animation: fadeUp 0.1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+      }
+    }
+  }
+  .deleteButton {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: none;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 0;
+    background-color: var(#{--components-background-default});
+    transition: 0.2s;
+    .trashIcon {
+      display: block;
+      cursor: pointer;
+      padding: 10px;
+      width: 16px;
+      height: auto;
+      margin: auto;
+      fill: var(#{--body-text-color-default});
+      background-color: var(#{--components-background-default});
+      transition: 0.2s;
+      // opacity: 0;
+
+      &:hover {
+        animation: shake 0.3s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+        // transform: translate3d(0, 0, 0);
+        // filter: invert(0.1);
+      }
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+    .loader {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      object-fit: cover;
+      z-index: 999999999999999;
+      width: 40px;
+      height: 40px;
+      transform: scale(2.1);
+      display: none;
+    }
+    &:hover {
+      filter: invert(0.1);
+    }
+  }
+  .isDeleted {
+    .trashIcon {
+      opacity: 0;
+    }
+    .loader {
+      display: block;
+    }
+    &:hover {
+      filter: invert(0) !important;
+    }
+  }
+}
+.lowOpacity {
+  animation: opacity 0.3s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes shake {
+  10% {
+    transform: translate3d(-0.5px, 0, 0);
+  }
+
+  30% {
+    transform: translate3d(0.8px, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(-1.7px, 0, 0);
+  }
+
+  80% {
+    transform: translate3d(1.6px, 0, 0);
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 1;
+    filter: brightness(1);
+  }
+
+  100% {
+    opacity: 0.5;
+    filter: brightness(0.95);
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

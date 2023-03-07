@@ -1,0 +1,107 @@
+.filterContainer {
+  user-select: none;
+  .filterTitle {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    cursor: pointer;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 10px 0 0 0;
+    background-color: var(#{--components-background-default});
+    border: 1px solid var(#{--border-items-default});
+    box-sizing: border-box;
+    z-index: 2;
+    &::after {
+      content: url(../../../../../../img/icons/arrow.svg);
+      display: block;
+      height: 15px;
+    }
+  }
+  .filterContent {
+    position: relative;
+    top: -1px;
+    width: 100%;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    display: none;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: var(#{--components-background-default});
+    border-radius: 0 0 5px 5px;
+    border: 1px solid var(#{--border-items-default});
+    overflow-y: auto;
+    z-index: 0;
+    label {
+      text-transform: uppercase;
+      color: rgb(129, 129, 129);
+      margin-bottom: 5px;
+      font-size: 10px;
+    }
+    input {
+      width: 100%;
+      height: 40px;
+      border: 1px solid rgb(231, 231, 231);
+      padding: 15px 13px;
+      margin-bottom: 15px;
+      outline: none;
+    }
+    .applyButton {
+      font-size: 14px;
+      font-weight: bold;
+      height: 40px;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      width: 100%;
+      background-color: var(#{--filter-button-default});
+      border: 1px solid rgb(0, 0, 0);
+      color: var(#{--body-text-color-default});
+      transition: 0.2s;
+      &:hover {
+        background-color: var(#{--heart-background-default});
+      }
+      &:active {
+        background-color: var(#{--sizePicker-disable-background-default});
+        transform: scale(0.97);
+      }
+    }
+
+    .filterError {
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+      width: 100%;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 11px;
+      line-height: 16px;
+      color: rgb(233, 28, 35);
+      border: 1px solid rgb(233, 28, 35);
+      background-color: var(#{--components-background-default});
+      margin-bottom: 20px;
+      padding: 10px 14px;
+    }
+  }
+
+  .showFilter {
+    display: flex !important;
+    animation: show 0.3s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
