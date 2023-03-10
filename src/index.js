@@ -1,5 +1,5 @@
 import "./index.scss";
-import "./assets/i18n/i18n";
+import "./assets/i18n/i18n.js";
 import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
