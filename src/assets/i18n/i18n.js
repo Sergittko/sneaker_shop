@@ -26,7 +26,7 @@ i18n
     resources,
     lng: "en",
     fallbackLng: "en",
-    debug: true,
+    debug: false,
     detection: {
       order: ["queryString", "cookie"],
       cache: ["cookie"],
