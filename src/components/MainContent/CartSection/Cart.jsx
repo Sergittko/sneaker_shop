@@ -3,6 +3,7 @@ import OrderCard from "./OrderCard/OrderCard";
 import DefaultButton from "./../../common/defaultButton/DefaultButton";
 import EmptyCart from "./EmptyCart/EmptyCart";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 let Cart = ({ cartData, deleteItem, setQuantinyTh }) => {
   const { t } = useTranslation();
@@ -42,10 +43,12 @@ let Cart = ({ cartData, deleteItem, setQuantinyTh }) => {
             </p>
           </div>
           <div className={style.buttonContainer}>
-            <DefaultButton
-              innerText={t("cartSection.buttonOrder")}
-              color="#000"
-            />
+            <Link to={"/cart/place_order"}>
+              <DefaultButton
+                innerText={t("cartSection.buttonOrder")}
+                color="#000"
+              />
+            </Link>
           </div>
         </div>
       ) : (
