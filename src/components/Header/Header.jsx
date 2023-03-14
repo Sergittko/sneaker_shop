@@ -31,7 +31,7 @@ let Header = () => {
   });
 
   return (
-    <div id="outer" onClick={(e) => console.log(e.target)}>
+    <div>
       {windowSize > 760 ? (
         <header className={style.headerContainer}>
           <div className={style.headerLogo}>
@@ -93,6 +93,13 @@ let Header = () => {
 
           <div
             className={classNames(
+              style.sidebarBackground,
+              activeBurger && style.activeMenuBackground
+            )}
+            onClick={() => setActiveBurger(false)}
+          ></div>
+          <div
+            className={classNames(
               style.menuSidebar,
               activeBurger && style.activeMenu
             )}
@@ -112,7 +119,7 @@ let Header = () => {
 
             <nav className={style.headerNavigation}>
               <ul>
-                <li>
+                <li onClick={() => setActiveBurger(false)}>
                   <NavLink
                     className={({ isActive }) =>
                       isActive ? style.active : undefined
@@ -122,7 +129,7 @@ let Header = () => {
                     {t("menu.main")}
                   </NavLink>
                 </li>
-                <li>
+                <li onClick={() => setActiveBurger(false)}>
                   <NavLink
                     className={({ isActive }) =>
                       isActive ? style.active : undefined
@@ -132,7 +139,7 @@ let Header = () => {
                     {t("menu.sneakers")}
                   </NavLink>
                 </li>
-                <li>
+                <li onClick={() => setActiveBurger(false)}>
                   <NavLink
                     className={({ isActive }) =>
                       isActive ? style.active : undefined

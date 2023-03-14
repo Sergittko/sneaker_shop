@@ -72,6 +72,20 @@
     }
   }
 
+  .sidebarBackground {
+    display: none;
+    width: 1000vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: 0.7;
+    z-index: -1;
+  }
+
   .menuSidebar {
     position: absolute;
     width: 70%;
@@ -81,7 +95,7 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
-    padding: 10px 30px 30px 30px;
+    padding: 10px 24px 24px 24px;
     background: var(#{--components-background-default});
 
     .headerLogo {
@@ -117,6 +131,13 @@
           margin: auto;
           fill: var(#{--body-text-color-default});
           transform: rotate(45deg);
+          transition: 0.2s;
+          &:focus {
+            fill: var(#{--components-hover-dark});
+          }
+          &:hover {
+            fill: var(#{--components-hover-dark});
+          }
         }
       }
     }
@@ -158,25 +179,19 @@
     .headerSwithers {
       margin: auto;
     }
-    &::before {
-      content: "";
-      width: 1000vw;
-      height: 100vh;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: #000;
-      opacity: 0.7;
-      z-index: -1;
-    }
   }
 
   .menuButton {
     z-index: -1;
     .menuIcon {
       fill: var(#{--body-text-color-default});
+      transition: 0.2s;
+      &:focus {
+        fill: var(#{--components-hover-dark});
+      }
+      &:hover {
+        fill: var(#{--components-hover-dark});
+      }
     }
   }
 
@@ -197,6 +212,11 @@
   animation: slideIn 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
 }
 
+.activeMenuBackground {
+  display: block !important;
+  animation: fadeUp 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
 @keyframes slideIn {
   0% {
     left: -70%;
@@ -204,5 +224,15 @@
 
   100% {
     left: 0%;
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.7;
   }
 }
