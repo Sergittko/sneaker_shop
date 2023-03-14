@@ -34,3 +34,16 @@
     }
   }
 }
+
+@media only screen and (max-width: 760px) {
+  .footerContacts {
+    p {
+      text-align: left !important;
+    }
+    ul {
+      grid-template-columns: repeat(5, 1fr) !important;
+      gap: 10px !important;
+      width: fit-content;
+    }
+  }
+}
