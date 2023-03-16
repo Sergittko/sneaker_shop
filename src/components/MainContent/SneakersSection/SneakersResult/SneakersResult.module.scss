@@ -121,3 +121,46 @@
     opacity: 1;
   }
 }
+
+@media only screen and (max-width: 645px) {
+  .allSneakers {
+    .sneakerCards {
+      grid-template-columns: 1fr 1fr;
+      width: fit-content;
+      margin: auto;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .allSneakers {
+    .sneakersSettings {
+      flex-direction: column;
+      .selectsContainer {
+        .select {
+          margin: 0 0 20px 0;
+          label {
+            margin: 0;
+          }
+          select {
+            margin: 0 10px 0 0;
+          }
+        }
+      }
+    }
+    .sneakerCards {
+      gap: 10px;
+    }
+  }
+  .paginationContainer {
+    padding: 20px 0 0 0 !important;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .allSneakers {
+    .sneakerCards {
+      grid-template-columns: 1fr;
+    }
+  }
+}

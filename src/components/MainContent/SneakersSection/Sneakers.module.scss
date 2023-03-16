@@ -34,3 +34,31 @@
     margin: 0 0 30px 0;
   }
 }
+
+@media only screen and (max-width: 760px) {
+  .sneakersContainer {
+    .sneakersSection {
+      display: block;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .sneakersContainer {
+    padding: 0 0 10px 0;
+
+    .sneakersHeader {
+      padding: 40px 10px;
+      margin: 0 0 20px 0;
+      h1 {
+        font-size: 20px;
+      }
+    }
+    .sneakersSection {
+      padding: 10px;
+    }
+    h3 {
+      margin: 0 0 20px 0;
+    }
+  }
+}
