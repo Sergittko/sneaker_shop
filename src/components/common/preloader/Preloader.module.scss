@@ -15,12 +15,34 @@
   align-items: center;
   background-color: var(#{--components-background-default});
   animation: entrance 0.3s ease-in 0s 1 normal forwards;
-
-  h1 {
-    font-size: 32px;
-    text-align: center;
-    font-family: "Sedgwick Ave Display", cursive;
+  .textContainer {
+    display: flex;
+    align-items: center;
     animation: vibrate 4s ease-in 0s infinite normal forwards;
+    h1 {
+      font-size: 32px;
+      text-align: center;
+      font-family: "Sedgwick Ave Display", cursive;
+      margin: 10px 10px 10px 0;
+    }
+    .dot1,
+    .dot2,
+    .dot3 {
+      width: 17px;
+      height: 17px;
+      background-color: var(#{--body-text-color-default});
+      border-radius: 50%;
+      margin: 5px;
+    }
+    .dot1 {
+      animation: dot1 2s ease-in 0s infinite normal forwards;
+    }
+    .dot2 {
+      animation: dot2 2s ease-in 0s infinite normal forwards;
+    }
+    .dot3 {
+      animation: dot3 2s ease-in 0s infinite normal forwards;
+    }
   }
 
   img {
@@ -30,6 +52,12 @@
     background-color: #b4b4b4;
     border-radius: 50%;
     // border-radius: 40px;
+  }
+}
+
+@media only screen and (max-height: 702px) {
+  .preloaderContainer {
+    position: relative;
   }
 }
 
@@ -69,5 +97,77 @@
   100% {
     opacity: 1;
     transform: translate(0);
+  }
+}
+
+@keyframes dot1 {
+  0% {
+    opacity: 0;
+  }
+  4% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+
+  89% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes dot2 {
+  0% {
+    opacity: 0;
+  }
+  29% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+
+  89% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes dot3 {
+  0% {
+    opacity: 0;
+  }
+  59% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+
+  89% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
   }
 }
