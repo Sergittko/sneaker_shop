@@ -165,6 +165,15 @@
   }
 }
 
+.showAllFilters {
+  display: block;
+  animation: show 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  margin: 0 0 30px 0;
+}
+.hideAllFilters {
+  display: none;
+}
+
 @keyframes show {
   0% {
     opacity: 0;
@@ -220,5 +229,27 @@
   100% {
     opacity: 1;
     transform: translateY(0px);
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .filterWrapper {
+    margin: 0;
+    h3 {
+      position: relative;
+      background-color: var(#{--components-background-default});
+      padding: 15px;
+      border-radius: 5px;
+      &::after {
+        position: absolute;
+        content: url("../../../../img/icons/arrow.svg");
+        top: 0;
+        right: 15px;
+        bottom: 0;
+        margin: auto;
+        width: fit-content;
+        height: fit-content;
+      }
+    }
   }
 }
