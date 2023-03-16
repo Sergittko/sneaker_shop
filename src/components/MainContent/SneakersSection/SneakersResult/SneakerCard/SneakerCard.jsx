@@ -3,6 +3,7 @@ import plus from "../../../../../img/icons/plus.svg";
 import heart from "../../../../../img/icons/heart.svg";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { isMobile } from "react-device-detect";
 
 let SneakerCard = ({
   image,
@@ -65,7 +66,7 @@ let SneakerCard = ({
         <span className={style.price}>${price}</span>
       </div>
       <div className={style.addToCart}>
-        {addMode ? (
+        {isMobile || addMode ? (
           <button onClick={() => handleAddingToFavorite()}>
             <img
               className={isItemAdded ? style.check : null}

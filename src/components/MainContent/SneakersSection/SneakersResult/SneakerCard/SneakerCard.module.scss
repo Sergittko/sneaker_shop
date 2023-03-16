@@ -113,3 +113,12 @@
     transform: translateY(0px) scale(1.15);
   }
 }
+
+@media only screen and (max-width: 500px) {
+  .cardContainer {
+    padding: 10px;
+    .imageContainer {
+      height: auto;
+    }
+  }
+}

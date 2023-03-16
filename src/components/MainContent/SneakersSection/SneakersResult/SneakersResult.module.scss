@@ -136,13 +136,18 @@
   .allSneakers {
     .sneakersSettings {
       flex-direction: column;
+      background-color: var(#{--components-background-default});
+      margin: 0 0 20px 0;
+      padding: 20px;
+      border-radius: 5px;
       .selectsContainer {
         .select {
-          margin: 0 0 20px 0;
+          margin: 0;
           label {
             margin: 0;
           }
           select {
+            background-color: var(#{--components-background-default});
             margin: 0 10px 0 0;
           }
         }
@@ -157,7 +162,7 @@
   }
 }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 320px) {
   .allSneakers {
     .sneakerCards {
       grid-template-columns: 1fr;
