@@ -106,3 +106,40 @@
     }
   }
 }
+
+@media only screen and (max-width: 360px) {
+  .footerContainer {
+    .footerContent {
+      padding: 0px 10px 15px 10px;
+      .logo {
+        padding: 5px 0px;
+        img {
+          width: 40px;
+          height: 40px;
+        }
+        h2 {
+          font-size: 14px;
+        }
+      }
+      .footerInformation {
+        .skills {
+          ul {
+            flex-direction: column;
+          }
+        }
+        .skills,
+        .projects {
+          h4 {
+            font-size: 15px !important;
+          }
+          ul {
+            font-size: 12px !important;
+          }
+        }
+      }
+    }
+    small {
+      font-size: 12px;
+    }
+  }
+}
