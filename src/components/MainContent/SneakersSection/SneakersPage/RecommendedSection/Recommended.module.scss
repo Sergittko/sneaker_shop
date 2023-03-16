@@ -16,3 +16,39 @@
     }
   }
 }
+
+@media only screen and (max-width: 645px) {
+  .recommendedSection {
+    .innerContainer {
+      h2 {
+        text-align: center;
+      }
+      .recommended {
+        margin: 0 auto;
+        width: fit-content;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .recommendedSection {
+    .innerContainer {
+      padding: 40px 10px;
+      .recommended {
+        gap: 10px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .recommendedSection {
+    .innerContainer {
+      .recommended {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}
