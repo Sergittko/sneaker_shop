@@ -161,3 +161,21 @@
     }
   }
 }
+
+@media only screen and (max-width: 320px) {
+  .mainContainer {
+    .informationContainer {
+      margin: 0 auto 0 0 !important;
+      padding: 10px !important;
+      h1 {
+        font-size: 24px !important;
+      }
+    }
+    .category {
+      .sneakersSection {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px;
+      }
+    }
+  }
+}
