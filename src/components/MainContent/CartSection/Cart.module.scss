@@ -45,3 +45,9 @@
     opacity: 1;
   }
 }
+
+@media only screen and (max-width: 500px) {
+  .cartContainer {
+    padding: 0 10px;
+  }
+}

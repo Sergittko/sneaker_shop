@@ -77,3 +77,9 @@
     }
   }
 }
+
+@media only screen and (max-width: 500px) {
+  .orderSummary {
+    padding: 0 10px;
+  }
+}
