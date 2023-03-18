@@ -19,6 +19,11 @@ let Header = () => {
   const [activeBurger, setActiveBurger] = useState(false);
 
   useEffect(() => {
+    if (activeBurger) document.body.style.overflow = "hidden";
+    if (!activeBurger) document.body.style.overflow = "unset";
+  }, [activeBurger]);
+
+  useEffect(() => {
     const handleWindowResize = () => {
       setWindowSize(window.innerWidth);
     };
