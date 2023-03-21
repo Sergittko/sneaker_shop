@@ -18,7 +18,7 @@
   .textContainer {
     display: flex;
     align-items: center;
-    animation: vibrate 4s ease-in 0s infinite normal forwards;
+    // animation: vibrate 4s ease-in 0s infinite normal forwards;
     h1 {
       font-size: 32px;
       text-align: center;
@@ -35,13 +35,13 @@
       margin: 5px;
     }
     .dot1 {
-      animation: dot1 2s ease-in 0s infinite normal forwards;
+      animation: dot111 3s ease-in 0s infinite normal forwards;
     }
     .dot2 {
-      animation: dot2 2s ease-in 0s infinite normal forwards;
+      animation: dot222 3s ease-in 0s infinite normal forwards;
     }
     .dot3 {
-      animation: dot3 2s ease-in 0s infinite normal forwards;
+      animation: dot333 3s ease-in 0s infinite normal forwards;
     }
   }
 
@@ -106,9 +106,17 @@
   }
   4% {
     opacity: 0;
+    transform: scale(0);
   }
   5% {
     opacity: 1;
+  }
+  10% {
+    transform: scale(1);
+  }
+
+  86% {
+    transform: scale(1);
   }
 
   89% {
@@ -116,6 +124,7 @@
   }
 
   90% {
+    transform: scale(0);
     opacity: 0;
   }
 
@@ -130,9 +139,17 @@
   }
   29% {
     opacity: 0;
+    transform: scale(0);
   }
   30% {
     opacity: 1;
+  }
+  35% {
+    transform: scale(1);
+  }
+
+  86% {
+    transform: scale(1);
   }
 
   89% {
@@ -140,6 +157,7 @@
   }
 
   90% {
+    transform: scale(0);
     opacity: 0;
   }
 
@@ -154,9 +172,17 @@
   }
   59% {
     opacity: 0;
+    transform: scale(0);
   }
   60% {
     opacity: 1;
+  }
+  65% {
+    transform: scale(1);
+  }
+
+  86% {
+    transform: scale(1);
   }
 
   89% {
@@ -164,10 +190,95 @@
   }
 
   90% {
+    transform: scale(0);
     opacity: 0;
   }
 
   100% {
+    opacity: 0;
+  }
+}
+
+@keyframes dot111 {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  10% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  60% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes dot222 {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  20% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  30% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  70% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  80% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes dot333 {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  40% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  90% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0);
     opacity: 0;
   }
 }
