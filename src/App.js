@@ -25,7 +25,7 @@ let App = ({ initializeApp, isInitialized }) => {
       <main className={style.mainContent}>
         <ScrollToTop>
           <Routes>
-            <Route path="/" element={<MainContainer />}></Route>
+            <Route exact path="/" element={<MainContainer />}></Route>
             <Route path="/sneakers" element={<Sneakers />} />
             <Route path="/sneakers/:id" element={<SneakerPageContainer />} />
             <Route path="/cart" element={<CartContainer />} />
