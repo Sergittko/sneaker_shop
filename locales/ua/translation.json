@@ -95,5 +95,25 @@
       "returnsDescription2": "Якщо у вас є якісь питання чи проблеми щодо розміру або стану певного товару на нашому сайті, будь ласка, зв'яжіться з нами перед покупкою."
     },
     "recommended": "РЕКОМЕНДОВАНО ДЛЯ ВАС"
+  },
+
+  "placeOrderSection": {
+    "orderConfirmed": {
+      "title": "Замовлення підтверджено",
+      "hint": "wait for our manager's response by e-mail"
+    },
+    "title": "SHIPPING INFORMATION",
+    "email": "Your Email Address",
+    "name": "Full Name",
+    "address": "Street Address",
+    "city": "City",
+    "zip": "Zip / Postal Code",
+    "telephone": "Telephone",
+    "emailPlaceholrer": "email",
+    "namePlaceholrer": "name",
+    "addressPlaceholrer": "address",
+    "cityPlaceholrer": "city",
+    "zipPlaceholrer": "zip",
+    "telephonePlaceholrer": "telephone"
   }
 }

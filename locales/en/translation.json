@@ -95,5 +95,25 @@
       "returnsDescription2": "If you have any questions or concerns with regard to sizing or condition of a specific product on our site, please contact us before purchasing."
     },
     "recommended": "RECOMMENDED FOR YOU"
+  },
+
+  "placeOrderSection": {
+    "orderConfirmed": {
+      "title": "Order confirmed",
+      "hint": "wait for our manager's response by e-mail"
+    },
+    "title": "SHIPPING INFORMATION",
+    "email": "Your Email Address",
+    "name": "Full Name",
+    "address": "Street Address",
+    "city": "City",
+    "zip": "Zip / Postal Code",
+    "telephone": "Telephone",
+    "emailPlaceholrer": "email",
+    "namePlaceholrer": "name",
+    "addressPlaceholrer": "address",
+    "cityPlaceholrer": "city",
+    "zipPlaceholrer": "zip",
+    "telephonePlaceholrer": "telephone"
   }
 }
