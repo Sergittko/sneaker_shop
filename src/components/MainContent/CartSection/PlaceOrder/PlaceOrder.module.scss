@@ -76,6 +76,41 @@
       }
     }
   }
+
+  .orderConfitmedContainer {
+    padding: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    h2 {
+      margin: 0 0 10px 0;
+    }
+    span {
+      color: #818181;
+      font-size: 14px;
+      line-height: 16px;
+    }
+    .backToMain {
+      a {
+        margin: 50px 0 0 0;
+        font-size: 14px;
+        color: var(#{--heart-fill-default});
+        opacity: 0.8;
+        transition: 0.2s;
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 500px) {

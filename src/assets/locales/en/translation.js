@@ -105,4 +105,26 @@ export const en = {
     },
     recommended: "RECOMMENDED FOR YOU",
   },
+
+  placeOrderSection: {
+    orderConfirmed: {
+      title: "Order confirmed",
+      hint: "wait for our manager's response by e-mail",
+      button: "Back to Main",
+    },
+    title: "SHIPPING INFORMATION",
+    email: "Your Email Address",
+    name: "Full Name",
+    address: "Street Address",
+    city: "City",
+    zip: "Zip / Postal Code",
+    telephone: "Telephone",
+    emailPlaceholrer: "email",
+    namePlaceholrer: "name",
+    addressPlaceholrer: "address",
+    cityPlaceholrer: "city",
+    zipPlaceholrer: "zip",
+    telephonePlaceholrer: "telephone",
+    makeOrderBTN: "Make order",
+  },
 };
