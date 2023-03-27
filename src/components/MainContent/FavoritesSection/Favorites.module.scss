@@ -141,8 +141,17 @@
 
 @media only screen and (max-width: 320px) {
   .favoritesContainer {
-    .favoriteItems {
+    .emptyFavorites {
       grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media only screen and (max-height: 650px) {
+  .favoritesContainer {
+    .emptyFavorites {
+      position: relative;
+      height: 300px;
     }
   }
 }

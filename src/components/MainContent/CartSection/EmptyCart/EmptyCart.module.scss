@@ -27,3 +27,10 @@
     }
   }
 }
+
+@media only screen and (max-height: 650px) {
+  .emptyCartContainer {
+    position: relative;
+    height: 300px;
+  }
+}
