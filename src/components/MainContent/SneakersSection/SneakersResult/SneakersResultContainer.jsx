@@ -44,13 +44,14 @@ let SneakersResultContainer = (props) => {
           src={loader}
           alt="loader"
           style={{
-            position: "absolute",
+            position: window.innerWidth < 760 ? "relative" : "absolute",
             top: 0,
             left: 0,
             width: "300px",
             bottom: 0,
             right: 0,
             margin: "auto",
+            display: "block",
           }}
         />
       )}
