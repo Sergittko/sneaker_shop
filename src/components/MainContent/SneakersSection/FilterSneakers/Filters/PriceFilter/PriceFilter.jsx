@@ -1,14 +1,19 @@
 import style from "./PriceFilter.module.scss";
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import classNames from "classnames";
 
-let PriceFilter = ({ setFilterData }) => {
+let PriceFilter = ({ setFilterData, clearFilters }) => {
   let [filterMode, changeFilterMode] = useState(false);
   let [errorMessage, showError] = useState(false);
   let [inputFrom, changeInputFrom] = useState(10);
   let [inputTo, changeInputTo] = useState(6000);
   const { t } = useTranslation();
+
+  useEffect(() => {
+    clearFilters && changeInputFrom(10);
+    clearFilters && changeInputTo(6000);
+  }, [clearFilters]);
 
   let applyPrice = () => {
     if (inputFrom > inputTo) {

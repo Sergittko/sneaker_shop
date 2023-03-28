@@ -7,22 +7,31 @@ import PriceFilter from "./Filters/PriceFilter/PriceFilter";
 import YearFilter from "./Filters/YearFilter/YearFilter";
 import { ReactComponent as ChevroneUp } from "../../../../img/icons/circleChevronUp.svg";
 import { Link as ScrollLink } from "react-scroll";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 let FilterSneakers = ({ setFilterData }) => {
   const { t } = useTranslation();
   let [showAllFilters, setShowAllFilters] = useState(false);
+  let [clearFilters, setClearFilters] = useState(false);
+
+  useEffect(() => {
+    setClearFilters(false);
+  }, [clearFilters]);
 
   return (
     <aside className={style.filterWrapper}>
       <div>
-        <h3
-          onClick={() =>
-            window.innerWidth < 760 && setShowAllFilters(!showAllFilters)
-          }
-        >
-          {t("sneakersSection.filterSneakers.filterTitle")}
-        </h3>
+        <div className={style.filterHeader}>
+          <h3
+            className={style.filterTitle}
+            onClick={() =>
+              window.innerWidth < 760 && setShowAllFilters(!showAllFilters)
+            }
+          >
+            {t("sneakersSection.filterSneakers.filterTitle")}
+          </h3>
+          <button onClick={() => setClearFilters(true)}>Clear Filters</button>
+        </div>
         <div
           className={
             window.innerWidth < 760
@@ -32,11 +41,26 @@ let FilterSneakers = ({ setFilterData }) => {
               : ""
           }
         >
-          <ModelFilter setFilterData={setFilterData} />
-          <BrandFilter setFilterData={setFilterData} />
-          <SizeFilter setFilterData={setFilterData} />
-          <PriceFilter setFilterData={setFilterData} />
-          <YearFilter setFilterData={setFilterData} />
+          <ModelFilter
+            setFilterData={setFilterData}
+            clearFilters={clearFilters}
+          />
+          <BrandFilter
+            setFilterData={setFilterData}
+            clearFilters={clearFilters}
+          />
+          <SizeFilter
+            setFilterData={setFilterData}
+            clearFilters={clearFilters}
+          />
+          <PriceFilter
+            setFilterData={setFilterData}
+            clearFilters={clearFilters}
+          />
+          <YearFilter
+            setFilterData={setFilterData}
+            clearFilters={clearFilters}
+          />
         </div>
       </div>
       {window.innerWidth > 760 && (

@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import classNames from "classnames";
 
-let BrandFilter = ({ setFilterData }) => {
+let BrandFilter = ({ setFilterData, clearFilters }) => {
   const { t } = useTranslation();
   let [filterMode, changeFilterMode] = useState(false);
   let [filter, changeFilter] = useState({
@@ -18,6 +18,17 @@ let BrandFilter = ({ setFilterData }) => {
     airJordan: "Air Jordan",
     bape: "BAPE",
   };
+
+  useEffect(() => {
+    clearFilters &&
+      changeFilter((prev) => ({
+        ...prev,
+        nike: false,
+        adidas: false,
+        airJordan: false,
+        bape: false,
+      }));
+  }, [clearFilters]);
 
   useEffect(() => {
     let checkFilter = [];

@@ -1,14 +1,19 @@
 import style from "./YearFilter.module.scss";
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import classNames from "classnames";
 
-let YearFilter = ({ setFilterData }) => {
+let YearFilter = ({ setFilterData, clearFilters }) => {
   let [filterMode, changeFilterMode] = useState(false);
   let [errorMessage, showError] = useState(false);
   let [inputFrom, changeInputFrom] = useState(1994);
   let [inputTo, changeInputTo] = useState(2023);
   const { t } = useTranslation();
+
+  useEffect(() => {
+    clearFilters && changeInputFrom(1994);
+    clearFilters && changeInputTo(2023);
+  }, [clearFilters]);
 
   let applyYear = () => {
     if (inputFrom > inputTo) {

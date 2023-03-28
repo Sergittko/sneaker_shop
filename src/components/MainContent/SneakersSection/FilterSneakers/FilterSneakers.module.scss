@@ -5,6 +5,32 @@
   justify-content: space-between;
   align-items: stretch;
 
+  .filterHeader {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 0 0 -11px 0;
+
+    button {
+      background: none;
+      color: inherit;
+      border: none;
+      outline: none;
+      text-decoration: underline;
+      font-size: 14px;
+      padding: 0;
+      cursor: pointer;
+      transition: 0.2s;
+
+      &:hover {
+        opacity: 0.8;
+      }
+      &:active {
+        opacity: 0.5;
+      }
+    }
+  }
+
   .filterContainer {
     user-select: none;
     .filterTitle {
@@ -235,21 +261,43 @@
 @media only screen and (max-width: 760px) {
   .filterWrapper {
     margin: 0;
-    h3 {
-      position: relative;
-      background-color: var(#{--components-background-default});
-      padding: 15px;
-      border-radius: 5px;
-      &::after {
-        position: absolute;
-        content: url("../../../../img/icons/arrow.svg");
-        top: 0;
-        right: 15px;
-        bottom: 0;
-        margin: auto;
-        width: fit-content;
-        height: fit-content;
+    .filterHeader {
+      margin: 0 0 20px 0;
+      align-items: center;
+      .filterTitle {
+        position: relative;
+        width: 100%;
+        background-color: var(#{--components-background-default});
+        padding: 15px;
+        border-radius: 5px;
+        margin: 0 !important;
+        &::after {
+          position: absolute;
+          content: url("../../../../img/icons/arrow.svg");
+          top: 0;
+          right: 15px;
+          bottom: 0;
+          margin: auto;
+          width: fit-content;
+          height: fit-content;
+        }
       }
+      button {
+        width: max-content;
+        background: #222222;
+        height: 100%;
+        border-radius: 5px;
+        margin: 0 0 0 10px;
+        padding: 7px 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .filterWrapper {
+    .filterHeader {
+      margin: 0 0 10px 0;
     }
   }
 }
