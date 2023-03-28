@@ -71,6 +71,9 @@
             border-color: var(#{--sizePicker-border-hover-default});
             box-shadow: inset 0px 0px 1px 0px rgba(170, 163, 163, 0.62);
           }
+          &:active {
+            opacity: 0.4;
+          }
           input {
             opacity: 0;
             position: absolute;
