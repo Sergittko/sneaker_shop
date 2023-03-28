@@ -13,6 +13,7 @@ let PriceFilter = ({ setFilterData, clearFilters }) => {
   useEffect(() => {
     clearFilters && changeInputFrom(10);
     clearFilters && changeInputTo(6000);
+    applyPrice();
   }, [clearFilters]);
 
   let applyPrice = () => {

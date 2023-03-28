@@ -13,6 +13,7 @@ let YearFilter = ({ setFilterData, clearFilters }) => {
   useEffect(() => {
     clearFilters && changeInputFrom(1994);
     clearFilters && changeInputTo(2023);
+    applyYear();
   }, [clearFilters]);
 
   let applyYear = () => {
