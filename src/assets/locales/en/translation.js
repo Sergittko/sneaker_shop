@@ -127,4 +127,17 @@ export const en = {
     telephonePlaceholrer: "telephone",
     makeOrderBTN: "Make order",
   },
+
+  inputErrors: {
+    enterEmail: "enter email address",
+    incorrect: "incorrect email address",
+    enterFullName: "enter your full name",
+    enterFirstAndLastName: "enter first and last name",
+    enterAddress: "enter your address",
+    enterCity: "enter your city",
+    enterZip: "enter zip code",
+    incorrectZip: "incorrect zip code",
+    wrongNumberDigits: "wrong number of digits",
+    incorrectTelephone: "incorrect telephone number",
+  },
 };

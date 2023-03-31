@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 export const validation = {
   email(value, setError) {
     if (value.length < 2) {
