@@ -106,6 +106,7 @@ export const ua = {
     },
     recommended: "РЕКОМЕНДОВАНО ДЛЯ ВАС",
   },
+
   placeOrderSection: {
     orderConfirmed: {
       title: "Замовлення підтверджено",
@@ -126,5 +127,18 @@ export const ua = {
     zipPlaceholrer: "індекс",
     telephonePlaceholrer: "номер",
     makeOrderBTN: "Підтвердити замовлення",
+  },
+
+  inputErrors: {
+    enterEmail: "введіть адресу електронної пошти",
+    incorrect: "неправильна адреса електронної пошти",
+    enterFullName: "введіть ваше повне ім'я",
+    enterFirstAndLastName: "введіть прізвище та прізвище",
+    enterAddress: "введіть свою адресу",
+    enterCity: "введіть своє місто",
+    enterZip: "введіть поштовий індекс",
+    incorrectZip: "неправильний поштовий індекс",
+    wrongNumberDigits: "неправильна кількість цифр",
+    incorrectTelephone: "неправильний номер телефону",
   },
 };
