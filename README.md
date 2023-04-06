@@ -16,6 +16,7 @@
 * Theme switcher (light and dark themes).
 * Redux store to save shoes, cart and favorites.
 * Get, post, put and delete requests to get sneakers data.
+* It can filter sneakers by criteria.
 
 🌐Sneakers Shop on GitHub Pages: https://sergittko.github.io/sneaker_shop/. <br/>
 <h2 align="center">
