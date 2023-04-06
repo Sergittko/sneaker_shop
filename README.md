@@ -22,17 +22,21 @@
 
 🌐Sneakers Shop on GitHub Pages: https://sergittko.github.io/sneaker_shop/. <br/>
 <h2 align="center">
- Preview:
+ Preview of application:
 </h2>
  
 <p align="center">
-1) Start of using application: <br/>
-<img src="https://user-images.githubusercontent.com/62090645/198835627-2936267d-835e-4da9-88a3-4858dbf19b86.gif" width="550"> <br/>
+1) Language switcher: <br/>
+<img src="https://user-images.githubusercontent.com/62090645/230376163-07d7ffc4-eca4-433c-b503-e163f8138e09.mp4" width="550"> <br/>
 </p>
 
 <p align="center">
-2) Application functionality: <br/>
+2) Theme switcher: <br/>
 <img src="https://user-images.githubusercontent.com/62090645/198883133-d42ad537-54d4-455a-b522-538bf25c7790.gif" width="550"> <br/>
 </p>
+
+
+https://user-images.githubusercontent.com/62090645/230376163-07d7ffc4-eca4-433c-b503-e163f8138e09.mp4
+
 
 `Done by Sergio Diorov`
