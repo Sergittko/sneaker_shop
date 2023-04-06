@@ -29,7 +29,7 @@
 1) Language switcher: <br/>
 https://user-images.githubusercontent.com/62090645/230390391-6daab110-ef81-42af-9274-6fb127d87d1d.mp4
 </p>
-
+https://user-images.githubusercontent.com/62090645/230390391-6daab110-ef81-42af-9274-6fb127d87d1d.mp4
 <p align="center">
 2) Theme switcher: <br/>
 <img src="https://user-images.githubusercontent.com/62090645/198883133-d42ad537-54d4-455a-b522-538bf25c7790.gif" width="550"> <br/>
