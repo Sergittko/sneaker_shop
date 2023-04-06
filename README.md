@@ -17,7 +17,8 @@
 * Redux store to save shoes, cart and favorites.
 * Get, post, put and delete requests to get sneakers data.
 * It can filter sneakers by criteria.
-* Sort sneakers: from low or high price, by newest, trending or relevance
+* Sort sneakers: from low or high price, by newest, trending or relevance.
+* Form validation.
 
 🌐Sneakers Shop on GitHub Pages: https://sergittko.github.io/sneaker_shop/. <br/>
 <h2 align="center">
