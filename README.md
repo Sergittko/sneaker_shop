@@ -19,6 +19,8 @@
 * It can filter sneakers by criteria.
 * Sort sneakers: from low or high price, by newest, trending or relevance.
 * Form validation.
+* Pagination.
+* Selection number of shoes on page.
 
 🌐Sneakers Shop on GitHub Pages: https://sergittko.github.io/sneaker_shop/. <br/>
 <h2 align="center">
