@@ -27,12 +27,16 @@
  
 <p align="center">
 1) Language switcher: <br/>
-https://user-images.githubusercontent.com/62090645/230390391-6daab110-ef81-42af-9274-6fb127d87d1d.mp4
+https://user-images.githubusercontent.com/62090645/230390673-8b5b067c-638e-4b5a-a66b-53fa74db96e0.mp4
 </p>
-https://user-images.githubusercontent.com/62090645/230390391-6daab110-ef81-42af-9274-6fb127d87d1d.mp4
+
 <p align="center">
 2) Theme switcher: <br/>
 <img src="https://user-images.githubusercontent.com/62090645/198883133-d42ad537-54d4-455a-b522-538bf25c7790.gif" width="550"> <br/>
 </p>
+
+
+https://user-images.githubusercontent.com/62090645/230390673-8b5b067c-638e-4b5a-a66b-53fa74db96e0.mp4
+
 
 `Done by Sergio Diorov`
