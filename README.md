@@ -27,6 +27,9 @@
  
 <p align="center">
 1) Language switcher: <br/>
+ <video controls autoplay>
+  <source src="https://user-images.githubusercontent.com/62090645/230376163-07d7ffc4-eca4-433c-b503-e163f8138e09.mp4" type="video/mp4">
+</video>
 <img src="https://user-images.githubusercontent.com/62090645/230376163-07d7ffc4-eca4-433c-b503-e163f8138e09.mp4" width="550"> <br/>
 </p>
 
