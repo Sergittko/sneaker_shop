@@ -10,7 +10,7 @@
 *	SCSS, classnames.
 
 #### About application.
-#### This is a pet priject Sneaker Shop site. It has next features: 
+#### This is a pet project Sneaker Shop site. It has next features: 
 * Single Page Application.
 * Adaptive and responsive layout.
 * Language switcher (two languages: english an ukrainian).
