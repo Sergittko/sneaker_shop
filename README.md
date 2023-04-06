@@ -27,16 +27,30 @@
  
 <p align="center">
 1) Language switcher: <br/>
-https://user-images.githubusercontent.com/62090645/230390673-8b5b067c-638e-4b5a-a66b-53fa74db96e0.mp4
 </p>
+
+https://user-images.githubusercontent.com/62090645/230390673-8b5b067c-638e-4b5a-a66b-53fa74db96e0.mp4
+#
 
 <p align="center">
 2) Theme switcher: <br/>
-<img src="https://user-images.githubusercontent.com/62090645/198883133-d42ad537-54d4-455a-b522-538bf25c7790.gif" width="550"> <br/>
 </p>
 
+https://user-images.githubusercontent.com/62090645/230391489-fc3266d6-2568-4303-b979-52b3813a08bd.mp4
+#
 
-https://user-images.githubusercontent.com/62090645/230390673-8b5b067c-638e-4b5a-a66b-53fa74db96e0.mp4
+<p align="center">
+3) Search and buy sneakers: <br/>
+</p>
 
+https://user-images.githubusercontent.com/62090645/230392264-ce195231-8540-49ac-869d-e5dae5959c17.mp4
+#
+
+<p align="center">
+4) Add sneakers to favorites: <br/>
+</p>
+
+https://user-images.githubusercontent.com/62090645/230392684-2f03d8c5-7ae6-480a-95f2-68c013eb2799.mp4
+#
 
 `Done by Sergio Diorov`
